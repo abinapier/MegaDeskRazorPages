@@ -1,0 +1,86 @@
+@page
+@model MegaDesk.Pages.Quotes.CreateModel
+
+@{
+    ViewData["Title"] = "Add Quote";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+    <h4>Quote</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Quote.Name" class="control-label"></label>
+                    <input asp-for="Quote.Name" name="name"class="form-control" />
+                    <span asp-validation-for="Quote.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.DeskWidth" class="control-label"></label>
+                    <input asp-for="Quote.DeskWidth" name="width" class="form-control" />
+                    <span asp-validation-for="Quote.DeskWidth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.DeskDepth" class="control-label"></label>
+                    <input asp-for="Quote.DeskDepth" name="depth" class="form-control" />
+                    <span asp-validation-for="Quote.DeskDepth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.DrawerCount" class="control-label"></label>
+                    <input asp-for="Quote.DrawerCount" name="drawers" class="form-control" />
+                    <span asp-validation-for="Quote.DrawerCount" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.DeskSurfaceMaterial" class="control-label"></label>
+                    <select asp-for="Quote.DeskSurfaceMaterial" name="material" class="form-control">
+                        <option value="laminate">Laminate</option>
+                        <option value="oak">Oak</option>
+                        <option value="rosewood">Rosewood</option>
+                        <option value="veneer">Veneer</option>
+                        <option value="pine">Pine</option>
+                    </select>
+                    <span asp-validation-for="Quote.DeskSurfaceMaterial" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.OrderTime" class="control-label"></label>
+                    <select asp-for="Quote.OrderTime" name="time" class="form-control">
+                        <option value="14">Normal - 14 days</option>
+                        <option value="7">Fast - 7 days</option>
+                        <option value="5">Faster - 5 days</option>
+                        <option value="3">Fastest - 3 days</option>
+                    </select>
+                    <span asp-validation-for="Quote.OrderTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="button" value="Calculate Quote" class="btn btn-secondary"/>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quote.DeskQuote" class="control-label"></label>
+                    <div>Quote.DeskTime</div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add" class="btn btn-primary disabled" disabled/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-page="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>
