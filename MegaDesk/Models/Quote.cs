@@ -10,12 +10,15 @@ namespace MegaDesk.Models
 
         public string Name { get; set; }
 
+        [Range(24, 96)]
         [Display(Name = "Width (in)")]
         public int DeskWidth { get; set; }
 
+        [Range(12, 48)]
         [Display(Name = "Depth (in)")]
         public int DeskDepth { get; set; }
 
+        [Range(0, 7)]
         [Display(Name = "# Drawers")]
         public int DrawerCount { get; set; }
 

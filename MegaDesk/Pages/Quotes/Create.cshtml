@@ -5,7 +5,13 @@
     ViewData["Title"] = "Add Quote";
 }
 
-
+@functions{
+    public string GetDate()
+    {
+        DateTime today = DateTime.Today;
+        return today.ToString("yyyy-MM-dd");
+    }
+}
 
 <!DOCTYPE html>
 
@@ -17,7 +23,7 @@
 </head>
 <body>
 
-    <h4>Quote</h4>
+    <h4>Add New Quote</h4>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -25,7 +31,7 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Quote.DateAdded" class="control-label"></label>
-                    <input asp-for="Quote.DateAdded" id="date" type="date" class="form-control"/>
+                    <input asp-for="Quote.DateAdded" id="date" type="date" value="@GetDate()" class="form-control"/>
 
                     <span asp-validation-for="Quote.DateAdded" class="text-danger"></span>
                 </div>

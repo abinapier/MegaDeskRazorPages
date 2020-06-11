@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace MegaDesk
 {
     public class Startup
@@ -55,6 +56,8 @@ namespace MegaDesk
             {
                 endpoints.MapRazorPages();
             });
+
+
         }
     }
 }

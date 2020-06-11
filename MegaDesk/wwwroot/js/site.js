@@ -2,11 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
-function setDate() {
-    let date = document.getElementById("date");
-    let today = new Date();
-    date.value = today.toISOString();
-}
+
 
 function calculateQuote() {
     let width = document.getElementById("width").value;
@@ -70,7 +66,7 @@ function calculateQuote() {
         document.getElementById("quoteVal").value = quoteTotal;
         let submitBtn = document.getElementById("submit-btn");
         submitBtn.disabled = false;
-        setDate();
+       
 
     }
     
