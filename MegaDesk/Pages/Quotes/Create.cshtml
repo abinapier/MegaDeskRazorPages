@@ -5,12 +5,15 @@
     ViewData["Title"] = "Add Quote";
 }
 
+
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
+   
 </head>
 <body>
 
@@ -21,28 +24,34 @@
             <form method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
+                    <label asp-for="Quote.DateAdded" class="control-label"></label>
+                    <input asp-for="Quote.DateAdded" id="date" type="date" class="form-control"/>
+
+                    <span asp-validation-for="Quote.DateAdded" class="text-danger"></span>
+                </div>
+                <div class="form-group">
                     <label asp-for="Quote.Name" class="control-label"></label>
-                    <input asp-for="Quote.Name" name="name"class="form-control" />
+                    <input asp-for="Quote.Name" id="name" class="form-control" />
                     <span asp-validation-for="Quote.Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.DeskWidth" class="control-label"></label>
-                    <input asp-for="Quote.DeskWidth" name="width" class="form-control" />
+                    <input asp-for="Quote.DeskWidth" id="width" class="form-control" />
                     <span asp-validation-for="Quote.DeskWidth" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.DeskDepth" class="control-label"></label>
-                    <input asp-for="Quote.DeskDepth" name="depth" class="form-control" />
+                    <input asp-for="Quote.DeskDepth" id="depth" class="form-control" />
                     <span asp-validation-for="Quote.DeskDepth" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.DrawerCount" class="control-label"></label>
-                    <input asp-for="Quote.DrawerCount" name="drawers" class="form-control" />
+                    <input asp-for="Quote.DrawerCount" id="drawer" class="form-control" />
                     <span asp-validation-for="Quote.DrawerCount" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.DeskSurfaceMaterial" class="control-label"></label>
-                    <select asp-for="Quote.DeskSurfaceMaterial" name="material" class="form-control">
+                    <select asp-for="Quote.DeskSurfaceMaterial" id="material" class="form-control">
                         <option value="laminate">Laminate</option>
                         <option value="oak">Oak</option>
                         <option value="rosewood">Rosewood</option>
@@ -53,7 +62,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.OrderTime" class="control-label"></label>
-                    <select asp-for="Quote.OrderTime" name="time" class="form-control">
+                    <select asp-for="Quote.OrderTime" id="time" class="form-control">
                         <option value="14">Normal - 14 days</option>
                         <option value="7">Fast - 7 days</option>
                         <option value="5">Faster - 5 days</option>
@@ -62,14 +71,16 @@
                     <span asp-validation-for="Quote.OrderTime" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <input type="button" value="Calculate Quote" class="btn btn-secondary"/>
+                    <input type="button" value="Calculate Quote" class="btn btn-secondary" onclick="calculateQuote()" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Quote.DeskQuote" class="control-label"></label>
-                    <div>Quote.DeskTime</div>
+                    $<input asp-for="Quote.DeskQuote" id="quoteVal" value="0.00" readonly />
+                    <span asp-validation-for="Quote.DeskQuote" class="text-danger"></span>
+
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Add" class="btn btn-primary disabled" disabled/>
+                    <input type="submit" value="Add" id="submit-btn" class="btn btn-primary" disabled />
                 </div>
             </form>
         </div>
@@ -79,8 +90,11 @@
         <a asp-page="Index">Back to List</a>
     </div>
 
+
+    <script src="../../wwwroot/js/site.js"></script>
     @section Scripts {
         @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     }
+   
 </body>
 </html>

@@ -40,9 +40,6 @@ namespace MegaDesk.Pages.Quotes
 
             return RedirectToPage("./Index");
         }
-        public void CalculateQuote()
-        {
-            Quote.DeskQuote = 0;
-        }
+        
     }
 }
