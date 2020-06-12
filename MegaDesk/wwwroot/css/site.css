@@ -59,8 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Open Sans', sans-serif;
 }
 .footer {
   position: absolute;
@@ -117,4 +118,21 @@ input[type=radio]:checked {
     display: inline-block;
     width: 100px;
     height: 100px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    background-image: url(../images/backgroundwood1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+main{
+    width: 70%;
+    margin: auto;
 }
