@@ -70,13 +70,7 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
-/* HIDE RADIO 
-input[type=radio] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}*/
+/*Material Select Styles*/
 
 .radioSelect input {
     margin: 0;
@@ -84,6 +78,7 @@ input[type=radio] {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 
 /* CHECKED STYLES */
 input[type=radio]:checked {
@@ -114,7 +109,36 @@ input[type=radio]:checked {
     cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
-    display: inline-block;
+    display: block;
     width: 100px;
     height: 100px;
+    text-align: center;
 }
+
+.radioSelect label {
+    display: flex;
+    text-align: center;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.longhand {
+    flex-flow: wrap row;
+}
+
+.flex-item {
+    padding: 0 10px 10px 0;
+}
+
+.material-label {
+    justify-content: left !important;
+}
+

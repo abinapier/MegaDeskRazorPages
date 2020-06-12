@@ -57,26 +57,26 @@
                     <input asp-for="Quote.DrawerCount" id="drawer" class="form-control" />
                     <span asp-validation-for="Quote.DrawerCount" class="text-danger"></span>
                 </div>
-                <!--<div class="form-group">
-        <label asp-for="Quote.DeskSurfaceMaterial" class="control-label"></label>
-        <select asp-for="Quote.DeskSurfaceMaterial" id="material" class="form-control">
-            <option value="laminate" data-image="~/images/laminate50.jpg">Laminate</option>
-            <option value="oak" data-image="~/images/laminate50.jpg">Oak</option>
-            <option value="rosewood" data-image="~/images/laminate50.jpg">Rosewood</option>
-            <option value="veneer" data-image="~/images/laminate50.jpg">Veneer</option>
-            <option value="pine" data-image="~/images/laminate50.jpg">Pine</option>
-        </select>
-        <span asp-validation-for="Quote.DeskSurfaceMaterial" class="text-danger"></span>
-    </div>-->
 
                 <div class="form=group radioSelect">
-                    <label asp-for="Quote.DeskSurfaceMaterial" class="control-label"></label><br />
-                    @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.laminate)@Html.Label("Laminate")
-                    @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.oak)@Html.Label("Oak")
-                    @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.rosewood)@Html.Label("Rosewood")
-                    @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.veneer)@Html.Label("Veneer")
-                    @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.pine)@Html.Label("Pine")
-
+                    <label asp-for="Quote.DeskSurfaceMaterial" class="control-label material-label"></label><br />
+                    <ul class="flex-container longhand">
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.laminate)@Html.Label("Laminate")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.oak)@Html.Label("Oak")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.rosewood)@Html.Label("Rosewood")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.veneer)@Html.Label("Veneer")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.pine)@Html.Label("Pine")
+                        </li>
+                    </ul>
                     <span asp-validation-for="Quote.DeskSurfaceMaterial" class="text-danger"></span>
                 </div>
 
