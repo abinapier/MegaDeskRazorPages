@@ -2,9 +2,14 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    font-family: 'Playfair Display', serif;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: white;
+    text-decoration: none;
+    font-size:45px;
+    
 }
 
 /* Provide sufficient contrast against white background */
@@ -60,10 +65,16 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin: 0px;
     font-family: 'Open Sans', sans-serif;
+    background-image: url(../images/backgroundwood1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.footer {
+footer {
+  
+  border-top: solid 1px white;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -71,6 +82,25 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+header, footer {
+    padding: 15px;
+    color: #91a0c4;
+    background-color: #03222b;
+    margin:0px;
+}
+
+header{
+    text-align: center;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0px;
+}
 /* HIDE RADIO 
 input[type=radio] {
     position: absolute;
@@ -124,10 +154,7 @@ h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
 }
 .container{
-    background-image: url(../images/backgroundwood1920.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    
 
 
 }
@@ -135,4 +162,5 @@ h1, h2, h3, h4, h5 {
 main{
     width: 70%;
     margin: auto;
+    background-color: #ebe8ff;
 }
