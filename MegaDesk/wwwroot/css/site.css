@@ -116,6 +116,7 @@ input[type=radio] {
     -moz-appearance: none;
 }
 
+
 /* CHECKED STYLES */
 input[type=radio]:checked {
     outline: 2px solid #f00;
@@ -145,9 +146,10 @@ input[type=radio]:checked {
     cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
-    display: inline-block;
+    display: block;
     width: 100px;
     height: 100px;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5 {
@@ -164,3 +166,48 @@ main{
     margin: auto;
     background-color: #ebe8ff;
 }
+
+.radioSelect label {
+    display: flex;
+    text-align: center;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.longhand {
+    flex-flow: wrap row;
+}
+
+.flex-item {
+    padding: 0 10px 10px 0;
+}
+
+.material-label {
+    justify-content: left !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+.container {
+    background-image: url(../images/backgroundwood1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+}
+
+
