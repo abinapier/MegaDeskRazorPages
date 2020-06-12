@@ -8,7 +8,8 @@ function calculateQuote() {
     let width = document.getElementById("width").value;
     let depth = document.getElementById("depth").value;
     let drawers = document.getElementById("drawer").value;
-    let material = document.getElementById("material").value;
+    //let material = document.getElementById("material").value;
+    let material = document.getElementById("Quote_DeskSurfaceMaterial").value;
     let time = document.getElementById("time").value;
     if (width && depth && drawers > 0 && material && time) {
         //all values set
