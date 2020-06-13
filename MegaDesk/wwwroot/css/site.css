@@ -242,6 +242,10 @@ label {
     box-sizing: border-box;
 }
 
+.button-margin {
+    margin-bottom:40px;
+}
+
 .text-center {
     text-align: center;
 }
