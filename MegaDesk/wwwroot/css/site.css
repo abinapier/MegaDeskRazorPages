@@ -75,7 +75,7 @@ body {
 footer {
   
   border-top: solid 1px white;
-  position: absolute;
+  //position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
@@ -101,13 +101,8 @@ header{
     list-style: none;
     padding: 0px;
 }
-/* HIDE RADIO 
-input[type=radio] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}*/
+
+/*Select Material Stlying below*/
 
 .radioSelect input {
     margin: 0;
@@ -152,15 +147,7 @@ input[type=radio]:checked {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Playfair Display', serif;
-}
 
-main{
-    width: 70%;
-    margin: auto;
-    background-color: white;
-}
 
 .radioSelect label {
     display: flex;
@@ -189,8 +176,42 @@ main{
     justify-content: left !important;
 }
 
+/*Add New Quote Styling below */
+
+form {
+    /*max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;*/
+
+}
+
+
+form label.control-label{
+    display: block;
+    padding-top: .75rem;
+    font-weight: 500;
+}
+
+    form input.btn {
+        border: none;
+        background-color: #9c2c13;
+        color: white;
+        border-radius: 1rem;
+        padding: .75rem 1.5rem;
+        margin: 8px 0 8px;
+        width: 96%;
+        max-width: 15rem;
+    }
+
+/*General Styling below*/
+
 h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
+}
+main {
+    width: 70%;
+    margin: auto;
+    background-color: white;
 }
 
 
