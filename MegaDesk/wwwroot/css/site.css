@@ -155,7 +155,6 @@ input[type=radio]:checked {
 
 .radioSelect label {
     display: flex;
-    text-align: center;
     width: 100px;
     align-items: center;
     justify-content: center;
@@ -260,6 +259,7 @@ label {
 
 input {
     font-family: 'Open Sans', sans-serif;
+    padding: 5px;
 }
 
 /* Table Styling */
@@ -281,4 +281,12 @@ table {
 
 .tableSort {
     text-decoration: none;
+}
+
+select {
+    padding: 5px;
+}
+
+#quoteVal {
+    border: none;
 }
