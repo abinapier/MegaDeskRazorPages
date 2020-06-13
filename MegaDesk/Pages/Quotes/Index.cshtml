@@ -14,7 +14,7 @@
 <body>
     <h1>MegaDesk Quotes</h1>
     <p>
-        <a asp-page="Create">Add New Quote</a>
+        <a class="button" asp-page="Create">Add New Quote</a>
     </p>
 
     <form>
@@ -28,12 +28,12 @@
         <thead>
             <tr>
                 <th>
-                    <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    <a class="tableSort" asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
                         @Html.DisplayNameFor(model => model.Quote[0].DateAdded)
                     </a>
                 </th>
                 <th>
-                    <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    <a class="tableSort" asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
                         @Html.DisplayNameFor(model => model.Quote[0].Name)
                     </a>
                 </th>

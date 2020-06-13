@@ -75,11 +75,12 @@ body {
 footer {
   box-sizing: border-box;
   border-top: solid 1px white;
-  //position: absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  height: 60px; /* Vertically center the text there */
+  text-align: center;
 }
 
 header, footer {
@@ -195,28 +196,73 @@ form label.control-label{
     font-weight: 500;
 }
 
-    form input.btn {
-        border: none;
-        background-color: #9c2c13;
-        color: white;
-        border-radius: 1rem;
-        padding: .75rem 1.5rem;
-        margin: 8px 0 8px;
-        width: 96%;
-        max-width: 15rem;
-    }
+form input.btn, .button {
+    border: none;
+    background-color: #91a0c4;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 8px 0 8px;
+    width: 96%;
+    max-width: 15rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 /*General Styling below*/
 
 h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
 }
+
 main {
     width: 70%;
     margin: auto;
     background-color: white;
+    margin-bottom: 60px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
+.row {
+    display: grid;
+    grid-template-columns: 150px 300px;
+    grid-gap: 1em;
+}
 
+dt {
+    font-weight: bold;
+}
 
+label {
+    font-weight: bold;
+}
 
+.button {
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Table Styling */
+th {
+    text-align: left;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+table td {
+    padding: 10px 10px 10px 5px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.tableSort {
+    text-decoration: none;
+}
