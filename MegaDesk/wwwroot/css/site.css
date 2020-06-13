@@ -250,6 +250,18 @@ label {
     text-align: center;
 }
 
+.filter {
+    border: none;
+    background-color: #b3945b;
+    border-radius: .75rem;
+    padding: .50rem 1rem;
+    color: white;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Table Styling */
 th {
     text-align: left;

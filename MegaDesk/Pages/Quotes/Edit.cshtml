@@ -23,7 +23,7 @@
                 <input type="hidden" asp-for="Quote.ID" />
                 <div class="form-group">
                     <label asp-for="Quote.DateAdded" class="control-label"></label>
-                    <input asp-for="Quote.DateAdded" id="date" type="date" class="form-control"/>
+                    <input asp-for="Quote.DateAdded" id="date" type="date" class="form-control" />
                     <span asp-validation-for="Quote.DateAdded" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -46,15 +46,25 @@
                     <input asp-for="Quote.DrawerCount" class="form-control" id="drawer" />
                     <span asp-validation-for="Quote.DrawerCount" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Quote.DeskSurfaceMaterial" class="control-label"></label>
-                    <select asp-for="Quote.DeskSurfaceMaterial" id="material" class="form-control">
-                        <option value="laminate">Laminate</option>
-                        <option value="oak">Oak</option>
-                        <option value="rosewood">Rosewood</option>
-                        <option value="veneer">Veneer</option>
-                        <option value="pine">Pine</option>
-                    </select>
+                <div class="form=group radioSelect">
+                    <label asp-for="Quote.DeskSurfaceMaterial" class="control-label material-label"></label><br />
+                    <ul class="flex-container longhand">
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.laminate)@Html.Label("Laminate")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.oak)@Html.Label("Oak")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.rosewood)@Html.Label("Rosewood")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.veneer)@Html.Label("Veneer")
+                        </li>
+                        <li class="flex-item">
+                            @Html.RadioButtonFor(m => m.Quote.DeskSurfaceMaterial, MegaDesk.Models.SurfaceMaterial.pine)@Html.Label("Pine")
+                        </li>
+                    </ul>
                     <span asp-validation-for="Quote.DeskSurfaceMaterial" class="text-danger"></span>
                 </div>
                 <div class="form-group">
